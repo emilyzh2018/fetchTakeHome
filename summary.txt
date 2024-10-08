@@ -1,0 +1,48 @@
+Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+I chose Python as the language because I have previous experience using it for
+API development,the strong library/tool support (datetime, defaultdict), and
+supports frameworks like Flask which I have used extensively before for making APIs.
+Flask is lightweight, easy to set up, and frequently used for making RESTful APIs, 
+making it a good choice for this exercise. 
+Flask works well with Python’s built in libraries like datetime/json too, 
+which makes response and date/time parsing/handling easier for this project.
+
+What are the advantages and disadvantages of your solution?
+
+Advantages:
+My solution is pretty straightforward and simple, making it easy to understand and 
+work through/debug. The code is organized and easy to understand, with clarifying comments,
+and the methods for adding transactions, spending points, and fetching balances.
+Because of Flask’s lightweight and simple nature it will be easy to onboard new use cases
+in the future like adding functionality for multiple users.
+
+disadvantages:
+Modularity is an issue, there is a lack of seperation of concerns and I should 
+have added seperate files for declaring the routes, handling business logic that 
+is used for route. For example, make seperate methods in a seperate file for the logic 
+used in the /spend route to create cleaner code. The lack of modularity can make 
+debugging more of a developer pain point, and also there is a lack of code reusability
+because of this. This makes the program less scalable, as more bugs will probably
+appear when trying to add more users.
+
+The global variables are not great, and I should probably have handled keeping track
+of the states (balances, transactions) in a data models/classes instead.For ex. have a user
+class that has a field storing the balances and transactions for the user.
+Having global variables for depending on decreases modularity.
+
+What has been a favorite school/personal project thus far? What about it that challenged you?
+
+My favorite project I worked on was my project at Linkedin this summer where I 
+migrated the current backend services that support the guidance card on the Linkedin
+profile. I basically led my project from start to finish, from creating the design doc
+and evaluating design choices to having my changes pushed to prod and writing onboarding
+documentation for the future devs who are trying to migrate other use cases onto this 
+backend platform. I migrated the backend services from an older, outdated platform to a
+newer AI driven platform as a part of the profile team's larger goal of onboarding
+all profile actions to be AI driven. I found picking up and coding in new large codebases
+like the Profile API and other Linkedin APIs to be challenging, due to how I had never
+worked on a large scale codebase of this size within a completely new framework (Rest.Li).
+Learning about midtier API development and large scale coding practices was very
+interesting.
+
