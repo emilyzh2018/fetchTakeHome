@@ -5,8 +5,7 @@ API development,the strong library/tool support (datetime, defaultdict), and
 supports frameworks like Flask which I have used extensively before for making APIs.
 Flask is lightweight, easy to set up, and frequently used for making RESTful APIs, 
 making it a good choice for this exercise. 
-Flask works well with Python’s built in libraries like datetime/json too, 
-which makes response and date/time parsing/handling easier for this project.
+It also made response and date/time parsing/handling easier for this project.
 
 What are the advantages and disadvantages of your solution?
 
