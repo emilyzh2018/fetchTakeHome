@@ -72,8 +72,8 @@ http://127.0.0.1:8000/add
 This endpoint spends points from the user's account according to the criteria in the guidelines pdf. 
 If a request was made to spend more points than what a user has in total, then it will return a status code of 400 and a message saying the user doesn’t have enough points. Else, the endpoint will respond with a status code of 200 and a list of payer names and the number of points that were subtracted.
 
-Route: /spend
-Method: POST
+`Route: /spend`
+`Method: POST`
 
 Below is an example req body.
 ```Bash
@@ -99,8 +99,8 @@ Here is an example response:
 ### Get Balance
 This endpoint retrieves the current balance for all payers.
 
-Route: /balance
-Method: GET
+`Route: /balance`
+`Method: GET`
 ```Bash
 curl -X GET http://127.0.0.1:8000/balance
 ```
