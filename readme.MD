@@ -1,10 +1,10 @@
-### Fetch Points API 
+# Fetch Points API 
 This is a Flask REST API for tracking points from different payers and spending. The API allows adding points, spending points, and retrieving the current point balance.
 
-# Requirements
+### Requirements
 Make sure you have Python 3 installed. This API uses Flask and other dependencies that can be installed via a requirements.txt file.
 
-# Setup
+### Setup
 Clone this repository and go into the project directory.
 Create a virtual environment to manage the dependencies:
 
@@ -28,7 +28,7 @@ The server will run on port 8000 on http://127.0.0.1:8000.
 
 ## The API Endpoints
 
-1. Add Points
+### Add Points
 This endpoint adds points to a payer's account.
 
 Route: /add
@@ -68,7 +68,7 @@ curl -X POST -H "Content-Type: application/json" \
 -d '{"payer": "DANNON", "points": 1000, "timestamp": "2022-11-02T14:00:00Z"}' \
 http://127.0.0.1:8000/add
 ```
-2. Spend Points
+### Spend Points
 This endpoint spends points from the user's account according to the criteria in the guidelines pdf. 
 If a request was made to spend more points than what a user has in total, then it will return a status code of 400 and a message saying the user doesn’t have enough points. Else, the endpoint will respond with a status code of 200 and a list of payer names and the number of points that were subtracted.
 
@@ -96,7 +96,7 @@ Here is an example response:
 { "payer": "MILLER COORS", "points": -4,700 }
 ]
 ```
-3. Get Balance
+### Get Balance
 This endpoint retrieves the current balance for all payers.
 
 Route: /balance
