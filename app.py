@@ -3,10 +3,8 @@ from datetime import datetime
 from collections import defaultdict
 app = Flask(__name__)
 
-
 transactions = [] #global transactions list
 balances = defaultdict(int) #global balances dictionary 
-
 
 @app.route('/add', methods=['POST'])
 def add_points():
@@ -25,7 +23,6 @@ def add_points():
     
     #Update balance to add the points under the payer's acc
     balances[payer] += points
-    
     return 'Success', 200
 
 @app.route('/spend', methods=['POST'])
@@ -47,8 +44,6 @@ def spend_points():
     #Start spending points from the oldest transactions
     points_spent = defaultdict(int)
     for transaction in sorted_transactions:
-        
-
         payer = transaction['payer']
         points = transaction["points"]
         balance[payer] += points
@@ -70,7 +65,6 @@ def spend_points():
             points_spent[payer] -= points 
             balance[payer] -= points
             points_to_spend -= points
-            #1900 atp
         else:
             #Spend only part of the points
             points_spent[payer] -= points_to_spend
