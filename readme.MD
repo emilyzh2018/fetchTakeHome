@@ -14,7 +14,7 @@ Type the follow command to create a virtual environment:
 
 Activate the virtual environment w/ following commands:
 
-source .venv/bin/activate
+`source .venv/bin/activate`
 
 To install all required dependencies, run:
 
