@@ -31,8 +31,8 @@ The server will run on port 8000 on http://127.0.0.1:8000.
 ### Add Points
 This endpoint adds points to a payer's account.
 
-Route: /add
-Method: POST
+`Route: /add`
+`Method: POST`
 
 ```bash
 {
